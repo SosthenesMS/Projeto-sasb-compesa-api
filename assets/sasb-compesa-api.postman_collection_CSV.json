@@ -1,0 +1,1446 @@
+{
+	"info": {
+		"_postman_id": "dd1faaca-0f8b-40a2-852d-d104c0a0367a",
+		"name": "sasb-compesa-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22816946"
+	},
+	"item": [
+		{
+			"name": "Barragem",
+			"item": [
+				{
+					"name": "Obter Barragens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Barragem pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Nova Barragem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\":\"Itapacura\",\r\n    \"diretoria\":\"A definir\",\r\n    \"gerencia\":\"A definir\",\r\n    \"coordenacao\":\"A definir\",\r\n    \"titularidade\":\"A definir\",\r\n    \"anoCostrucao\":\"A definir\",\r\n    \"classificacaoDeRisco\":\"A definir\",\r\n    \"danoPotencialAssociado\":\"A definir\",\r\n    \"outorgaCapitacao\":\"A definir\",\r\n    \"outorgaObraHidrica\":\"A definir\",\r\n    \"baciaHidrografica\": {\r\n        \"idBaciaHidrografica\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Nova Barragem CSV",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBarragem\":{{idBarragem}},\r\n    \"nome\": \"{{nome}}\", \r\n    \"diretoria\": \"{{diretoria}}\",\r\n    \"gerencia\": \"{{gerencia}}\",\r\n    \"coordenacao\": \"{{coordenacao}}\",\r\n    \"titularidade\": \"{{titularidade}}\",\r\n    \"anoConstrucao\": \"{{anoConstrucao}}\",\r\n    \"outorgaCaptacao\": \"{{outorgaCaptacao}}\",\r\n    \"outorgaObraHidrica\": \"{{outorgaObraHidrica}}\",\r\n    \"baciaHidrografica\": {\r\n    \"idBaciaHidrografica\": {{idBaciaHidrografica}}\r\n    }\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Barragem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBarragem\": 1,\r\n    \"nome\":\"Itapacura\",\r\n    \"diretoria\":\"A definir\",\r\n    \"gerencia\":\"A definir\",\r\n    \"coordenacao\":\"A definir\",\r\n    \"titularidade\":\"A definir\",\r\n    \"anoCostrucao\":\"A definir\",\r\n    \"classificacaoDeRisco\":\"A definir\",\r\n    \"danoPotencialAssociado\":\"A definir\",\r\n    \"outorgaCapitacao\":\"A definir\",\r\n    \"outorgaObraHidrica\":\"A definir\",\r\n    \"baciahidrografica\": {\r\n        \"idBaciaHidrografica\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Barragem pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Barragem pelo Nome",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/nome/{nome}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"nome",
+								"{nome}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BarragemLocalizacao",
+			"item": [
+				{
+					"name": "Criar Barragem Localização",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"carpina\",\r\n    \"estado\": \"PE\",\r\n    \"latitude\": \"5555555\",\r\n    \"longitude\": \"666666666\",\r\n    \"linkGoogleEarth\": \"23v4t3tv24vt56v65v264v62v65v645646v6=89870-00==vtrevte\",\r\n    \"sistemaDeCoordenadas\": \"sdfdsfsdfsdf\",\r\n    \"barragem\":{\r\n        \"idBarragem\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragem/localizacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragem",
+								"localizacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Barragens Localização",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "1489a75d-8955-4b58-be12-f05236547b0c",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "user",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragem/localizacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragem",
+								"localizacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Barragem Localização",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragem/localizacao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragem",
+								"localizacao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Barragem Localização",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBarragemLocalizacao\": 99,\r\n    \"municipio\": \"Moreno\",\r\n    \"estado\": \"PE\",\r\n    \"latitude\": \"232323\",\r\n    \"longitude\": \"23232323\",\r\n    \"linkGoogleEarth\": \"23v4t3tv24vt56v65v264v62v65v645646v6=89870-00==vtrevte\",\r\n    \"sistemaDeCoordenadas\": \"sdfdsfsdfsdf\",\r\n    \"barragem\":{\r\n        \"idBarragem\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragem/localizacao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragem",
+								"localizacao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Barragem Localização pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragem/localizacao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragem",
+								"localizacao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Barragem Detalhes Técnicos",
+			"item": [
+				{
+					"name": "Obter Barragens Detalhes Técnicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/detalhes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"detalhes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Barragem Detalhes Técnicos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"volume\": 25,\n    \"altura\": 3.5,\n    \"areaInundada\": 35,\n    \"cotaDoCoroamento\": 33,\n    \"comprimento\": 33,\n    \"profundidadeMedia\": 33,\n    \"profundidadeMaxima\": 33,\n    \"descargaDeFundo\": 33,\n    \"cursoDeAguaBarrado\": \"A Definir\",\n    \"tipo\": \"A Definir\",\n    \"material\": \"A Definir\",\n    \"barragem\":{\n        \"idBarragem\": 2\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens/detalhes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"detalhes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Barragem Detalhes Técnicos pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/detalhes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"detalhes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Barragem Detalhes Técnicos",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idBarragemDetalhesTecnicos\": 2,\n    \"volume\": 25.0,\n    \"altura\": 3.5,\n    \"areaInundada\": 35.0,\n    \"cotaDoCoroamento\": 33.0,\n    \"comprimento\": 33.0,\n    \"profundidadeMedia\": 33.0,\n    \"profundidadeMaxima\": 33.0,\n    \"descargaDeFundo\": 33.0,\n    \"cursoDeAguaBarrado\": \"A definir\",\n    \"tipo\": \"A definir\",\n    \"material\": \"A definir\",\n    \"barragem\":{\n        \"idBarragem\": 0\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens/detalhes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"detalhes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Barragem  Detalhes Técnicos pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/detalhes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"detalhes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plano Segurança de Barragem",
+			"item": [
+				{
+					"name": "Criar Novo PSB",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : \"aaaaa\",\r\n    \"dataDeEntrega\" : \"25/01/2023\",\r\n    \"link\" : \"x.com\",\r\n    \"barragem\": {\r\n        \"idBarragem\": 1\r\n    }\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens/psb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"psb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Todos PSB",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/psb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"psb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter PSB pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/psb/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"psb",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar PSB pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/psb/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"psb",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar PSB",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPsb\": 2,\r\n    \"status\": \"A FAZER\",\r\n    \"dataDeEntrega\": \"25/02/6023\",\r\n    \"link\": \"www.5.com\",\r\n    \"barragem\": {\r\n        \"idBarragem\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens/psb",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"psb"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter PSB Pelo Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/psb/status/{status}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"psb",
+								"status",
+								"{status}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Plano Ação Emergencial",
+			"item": [
+				{
+					"name": "Criar Plano Ação Emergencial",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"Em dia\",\r\n    \"dataDeEntrega\": \"30/03/2023\",\r\n    \"link\": \"www.youtube.com\",\r\n    \"barragem\":{\r\n        \"idBarragem\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens/pae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"pae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Todos Planos de Ação Emergencial",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/pae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"pae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Plano Ação Emergencial pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/pae/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"pae",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Plano Ação Emergencial",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idPae\": 2,\r\n    \"status\": \"A vencer\",\r\n    \"dataDeEntrega\": \"20/02/2023\",\r\n    \"link\": \"www.trello.com\",\r\n    \"barragem\":{\r\n        \"idBarragem\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/barragens/pae",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"pae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Plano Ação Emergencial pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/barragens/pae/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"barragens",
+								"pae",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Inspeção",
+			"item": [
+				{
+					"name": "Obter Inspeção",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inspecao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Inspeção pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inspecao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Inspeção",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"\",\n    \"mes\": 1,\n    \"prioridade\": 1,\n    \"frequencia\": \"\",\n    \"responsavel\": \"\",\n    \"barragem\":{\n        \"idBarragem\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inspecao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Inspeção",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idInspecao\": 1,\n    \"status\": \"\",\n    \"mes\": 1,\n    \"prioridade\": 1,\n    \"frequencia\": \"\",\n    \"responsavel\": \"\",\n    \"barragem\":{\n        \"idBarragem\": 1\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inspecao",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Inspeção pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inspecao/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Relatorio de Inspecao",
+			"item": [
+				{
+					"name": "Criar Novo Relatorio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Em analise\",\r\n    \"tipo\":\"Barragem\",\r\n    \"link\":\"linkbarragem.com\",\r\n    \"inspetor\":\"inspetor\",\r\n    \"data\":\"21/02/2023\",\r\n    \"inspecao\":{\r\n        \"idInspecao\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inspecao/relatorios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao",
+								"relatorios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Relatório",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idRelatorioInspecao\": 7,\r\n    \"status\":\"Em analise\",\r\n    \"tipo\":\"Barragem\",\r\n    \"link\":\"linkbarragem.com\",\r\n    \"inspetor\":\"inspetor\",\r\n    \"data\":\"30/05/2023\",\r\n    \"inspecao\":{\r\n        \"idInspecao\": 1\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/inspecao/relatorios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao",
+								"relatorios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Todos Relatórios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inspecao/relatorios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao",
+								"relatorios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Relatório pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inspecao/relatorios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao",
+								"relatorios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Relatório pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/inspecao/relatorios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"inspecao",
+								"relatorios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuário",
+			"item": [
+				{
+					"name": "Criar Novo Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nome\": \"Álvaro\",\r\n        \"sobrenome\": \"Simões\",\r\n        \"email\": \"teste@teste.com\",\r\n        \"senha\": \"123456\",\r\n        \"matricula\": \"112233\",\r\n        \"telefone\": \"81988998888\",\r\n        \"tipoUsuario\":{\r\n            \"idTipoUsuario\": 1\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Todos Usuários",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Usuário pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"idUsuario\": 1,\r\n        \"nome\": \"Álvaro\",\r\n        \"sobrenome\": \"Simões\",\r\n        \"email\": \"teste@teste.com\",\r\n        \"senha\": \"123456\",\r\n        \"matricula\": \"112233\",\r\n        \"telefone\": \"81988998888\",\r\n        \"tipoUsuario\":{\r\n        \"idTipoUsuario\": 1\r\n        }\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Usuário pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "password",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "user",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Tipo Usuário",
+			"item": [
+				{
+					"name": "Criar Tipo Usuário",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"ADMINISTRADOR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/tipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"tipo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Tipo Usuário CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoUsuario\" : \"{{idTipoUsuario}}\",\r\n    \"nome\" : \"{{nome}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/tipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"tipo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Tipo Usuário",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/tipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"tipo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Tipo Usuário pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/usuarios/tipo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"tipo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Tipo Usuário",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idTipoUsuario\": 1,\r\n    \"nome\" : \"COLABORADOR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/usuarios/tipo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"usuarios",
+								"tipo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Tipo Usuário pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080//usuarios/tipo/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"",
+								"usuarios",
+								"tipo",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bacia Hidrográfica",
+			"item": [
+				{
+					"name": "Criar Bacia Hidrográfica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"Bacia do São Franciso\",\r\n    \"area\": 30000.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bacias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Bacia Hidrográfica CSV",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\" : \"{{nome}}\",\r\n    \"area\": {{area}} \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bacias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Bacias Hidrográficas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bacias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obter Bacia Hidrográfica pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/bacias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bacias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar Bacia Hidrográfica",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBaciaHidrografica\": 1,\r\n    \"nome\" : \"Bacia do São Franciso\",\r\n    \"area\": 30000.50\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bacias",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bacias"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Bacia Hidrográfica pelo ID",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/bacias/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"bacias",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "nome",
+			"value": "nome"
+		}
+	]
+}
