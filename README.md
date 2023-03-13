@@ -7,6 +7,10 @@
 <h2>Descrição do Projeto</h2>
 <p>O projeto foi idealizado e proposto durante o curso de Java Experience do Treina Recife. O objetivo foi a definição de uma REST APIs do novo Sistema de Acompanhamento de Segurança de Barragens da COMPESA (SASB-COMPESA), utilizando o padrão Spring MVC e Spring Boot framework.</p>
 
+<h3>Orientador:</h3>
+
+* Alexandre de Souza Jr.
+* GitHub: alexandresjunior
 
 <h3>Tecnologias usadas:</h3>
 
